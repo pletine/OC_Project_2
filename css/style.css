@@ -1,0 +1,16 @@
+/* Fonts */
+
+
+/* General style */
+
+
+/* Footer */
+table {
+	display: table;
+}
+table tr {
+	display: table-cell;
+}
+table tr td {
+	display: block;
+}
