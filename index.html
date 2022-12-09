@@ -7,10 +7,9 @@
     </head>
     <body>
         <header>
-            <img src="images/logo/Booki.png">
-
             <!-- Liens Hébergement ou Activités -->
             <div>
+                <img src="images/logo/Booki.png">
                 <a href="#">Hébergements</a>
                 <a href="#">Activités</a>
             </div>
@@ -18,8 +17,13 @@
             <p>En plein centre-ville ou en pleine nature</p>
 
             <!-- Zone de recherche -->
+            <label for="site-search"><img src="images/icons/icons8-marqueur-24.png"></label>
+            <input type="search" id="site-search" name="search">
+            <button>Rechercher</button>
+
             <!-- Filtres -->
-            <!-- Ligne d'information : Plus de 500 logements sont disponibles dans cette ville -->
+
+            <p><img src="images/icons/i.png">Plus de 500 logements sont disponibles dans cette ville</p>
         </header>
 
         <article>
@@ -35,26 +39,22 @@
         </div>
 
         <footer>
-            <table>
-                <tr> <!-- Colonne A propos -->
-                    <th>A propos</th>
-                    <td>Fonctionnement du site</td>
-                    <td>Conditions générales</td>
-                    <td>Données et confidentialité</td>
-                </tr>
-                <tr> <!-- Colonne Hébergements -->
-                    <th>Nos hébergements</th>
-                    <td>Charte qualité</td>
-                    <td>Proposer votre hôtel</td>
-                    <td></td>
-                </tr>
-                <tr> <!-- Colonne Assistance -->
-                    <th>Assistance</th>
-                    <td>Centre d'aide</td>
-                    <td>Nous contacter</td>
-                    <td></td>
-                </tr>
-            </table>
+            <div>
+                <h2>A propos</h2>
+                <p><a href="#">Fonctionnement du site</a></p>
+                <p><a href="#">Conditions générales</a></p>
+                <p><a href="#">Données et confidentialité</a></p>
+            </div>
+            <div>
+                <h2>Nos hébergements</h2>
+                <p><a href="#">Charte qualité</a></p>
+                <p><a href="#">Proposer votre hôtel</a></p>
+            </div>
+            <div>
+                <h2>Assistance</h2>
+                <p><a href="#">Centre d'aide</a></p>
+                <p><a href="#">Nous contacter</a></p>
+            </div>
         </footer>
     </body>
 </html>

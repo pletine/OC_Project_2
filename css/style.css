@@ -1,16 +1,68 @@
 /* Fonts */
-
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway/static/Raleway-Regular.ttf");
+}
 
 /* General style */
+body {
+    background-color: #FFFFFF;
+    width: 900px;
+    margin: auto;
+    width: 90%;
 
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header div{
+    display: block;
+}
+header div a{
+    position: relative;
+    right: 20%;
+}
+header div a:first-child{
+    right: 40%;
+}
+
+
+header label{
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    margin-right: -1%;
+}
+header input{
+    background-color: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    height: 50%;
+}
+header button{
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    margin-left: -2%;
+}
+header label, input, button{
+    padding: 1%;
+}
+
+/* Article */
+
+/* Aside */
 
 /* Footer */
-table {
-	display: table;
+footer{
+    display: flex;
+    background-color: #F2F2F2;
 }
-table tr {
-	display: table-cell;
+footer div{
+    display: block;
+    padding-right: 15%;
+    padding-left: 3%;
 }
-table tr td {
-	display: block;
+footer a{
+    text-decoration: none;
+    color: black;
 }
