@@ -1,60 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <title>Booki</title>
+        <meta name='description' content="Les meilleurs Réservations pour vos vacances">
+        <!-- Style et taille écran -->
+        <!--<link rel="stylesheet" href="css/style_reset.css">
+        <link rel="stylesheet" href="css/style_normalize.css">-->
         <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Script Font Awesome -->
+        <script src="https://kit.fontawesome.com/cb7e953be4.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
             <!-- Liens Hébergement ou Activités -->
-            <div>
-                <img src="images/logo/Booki.png">
-                <a href="#">Hébergements</a>
-                <a href="#">Activités</a>
-            </div>
+            <img src="images/logo/Booki.png" alt="Logo Booki">
+            <nav>
+                <ul>
+                    <li><a href="#">Hébergements</a></li>
+                    <li><a href="#">Activités</a></li>
+                </ul>
+            </nav>
+            
             <h1>Trouver votre hébergement pour les vacances de rêve</h1>
             <p>En plein centre-ville ou en pleine nature</p>
 
             <!-- Zone de recherche -->
-            <label for="site-search"><img src="images/icons/icons8-marqueur-24.png"></label>
-            <input type="search" id="site-search" name="search">
-            <button>Rechercher</button>
+            <form>
+                <label for="site-search"><img src="images/icons/icons8-marqueur-24.png"></label>
+                <input type="search" id="site-search" name="search">
+                <button>Rechercher</button>
+            </form>
 
             <!-- Filtres -->
-
+            <ul><p>Filtres</p>
+                <li>
+                    <!--<img 
+                        src="images/icons/money-bill-wave-solid.svg" 
+                        alt="billet de banque"
+                        height="22"
+                        width="22">-->
+                        <i></i>
+                        <p>Economies</p>
+                    </li>
+                <li>
+                    <img 
+                        src="images/icons/person-solid.svg" 
+                        alt="bonhomme"
+                        height="22"
+                        width="22">
+                        <p>Familial</p>
+                    </li>
+                <li>
+                    <img 
+                        src="images/icons/heart-solid.svg" 
+                        alt="coeur"
+                        height="22"
+                        width="18,33">
+                        <p>Romantique</p>
+                    </li>
+                <li>
+                    <img 
+                        src="images/icons/dog-solid.svg" 
+                        alt="petit chien"
+                        height="22"
+                        width="22">
+                        <p>Animaux autorisés</p>
+                    </li>
+            </ul>
             <p><img src="images/icons/i.png">Plus de 500 logements sont disponibles dans cette ville</p>
         </header>
 
         <article>
-            <h1>Hébergements à Marseille</h1>
+            <h2>Hébergements à Marseille</h2>
         </article>
 
         <aside>
-            <h1>Les plus populaires</h1>
+            <h2>Les plus populaires</h2>
         </aside>
 
         <div>
-            <h1>Activités à Marseille</h1>
+            <h2>Activités à Marseille</h2>
         </div>
 
         <footer>
-            <div>
-                <h2>A propos</h2>
-                <p><a href="#">Fonctionnement du site</a></p>
-                <p><a href="#">Conditions générales</a></p>
-                <p><a href="#">Données et confidentialité</a></p>
-            </div>
-            <div>
-                <h2>Nos hébergements</h2>
-                <p><a href="#">Charte qualité</a></p>
-                <p><a href="#">Proposer votre hôtel</a></p>
-            </div>
-            <div>
-                <h2>Assistance</h2>
-                <p><a href="#">Centre d'aide</a></p>
-                <p><a href="#">Nous contacter</a></p>
-            </div>
+            <ul>
+                <h3>A propos</h3>
+                <li><p><a href="#">Fonctionnement du site</a></p></li>
+                <li><p><a href="#">Conditions générales</a></p></li>
+                <li><p><a href="#">Données et confidentialité</a></p></li>
+            </ul>
+            <ul>
+                <h3>Nos hébergements</h3>
+                <li><p><a href="#">Charte qualité</a></p></li>
+                <li><p><a href="#">Proposer votre hôtel</a></p></li>
+            </ul>
+            <ul>
+                <h3>Assistance</h3>
+                <li><p><a href="#">Centre d'aide</a></p></li>
+                <li><p><a href="#">Nous contacter</a></p></li>
+            </ul>
         </footer>
     </body>
 </html>
