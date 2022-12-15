@@ -1,3 +1,12 @@
+/**************** Test part ******************/
+/*********************************************/
+body, header, footer, ul, div{
+    border: 1px solid black;
+}
+
+/************** End Test part ****************/
+/*********************************************/
+
 /* Fonts */
 @font-face {
     font-family: "Raleway";
@@ -7,45 +16,66 @@
 /* General style */
 body {
     background-color: #FFFFFF;
-    width: 900px;
+    width: 1000px; /* 1339px objectif */
     margin: auto;
-    width: 90%;
 
     font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
+ul li{
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
 
 /* Header */
-header div{
-    display: block;
-}
-header div a{
-    position: relative;
-    right: 20%;
-}
-header div a:first-child{
-    right: 40%;
-}
-
-
 header label{
     background-color: #F2F2F2;
     border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
-    margin-right: -1%;
 }
 header input{
     background-color: #FFFFFF;
     border: 1px solid #F2F2F2;
-    height: 50%;
+    height: 49px;
 }
 header button{
     background-color: #0065FC;
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
-    margin-left: -2%;
 }
 header label, input, button{
-    padding: 1%;
+    padding: 10px;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: right;
+}
+header nav ul li{
+    padding: 10px;
+    color: black;
+}
+
+header ul{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+header > ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    border: #d9d9d9 2px solid;
+    border-radius: 50px;
+    background-color: #DEEBFF;
+    margin: 0 20px 0 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    align-items: center;
+}
+header > ul li img{
+    margin-right: 5px;
 }
 
 /* Article */
@@ -55,14 +85,13 @@ header label, input, button{
 /* Footer */
 footer{
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     background-color: #F2F2F2;
 }
-footer div{
-    display: block;
-    padding-right: 15%;
-    padding-left: 3%;
+footer ul{
+    padding-right: 50px;
 }
 footer a{
-    text-decoration: none;
     color: black;
 }
