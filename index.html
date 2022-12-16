@@ -5,8 +5,9 @@
         <title>Booki</title>
         <meta name='description' content="Les meilleurs Réservations pour vos vacances">
         <!-- Style et taille écran -->
-        <!--<link rel="stylesheet" href="css/style_reset.css">
-        <link rel="stylesheet" href="css/style_normalize.css">-->
+        <link rel="stylesheet" href="css/style_reset.css">
+        <link rel="stylesheet" href="css/style_reset_mini.css">
+        <link rel="stylesheet" href="css/style_normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,61 +17,74 @@
     <body>
         <header>
             <!-- Liens Hébergement ou Activités -->
-            <img src="images/logo/Booki.png" alt="Logo Booki">
-            <nav>
-                <ul>
-                    <li><a href="#">Hébergements</a></li>
-                    <li><a href="#">Activités</a></li>
-                </ul>
-            </nav>
+            <section>
+                <img src="images/logo/Booki.png" alt="Logo Booki">
+                <nav>
+                    <ul>
+                        <li><a href="#">Hébergements</a></li>
+                        <li><a href="#">Activités</a></li>
+                    </ul>
+                </nav>
+            </section>
             
-            <h1>Trouver votre hébergement pour les vacances de rêve</h1>
-            <p>En plein centre-ville ou en pleine nature</p>
+            <!-- Title -->
+            <section>
+                <h1>Trouver votre hébergement pour les vacances de rêve</h1>
+                <p>En plein centre-ville ou en pleine nature</p>
+            </section>
 
             <!-- Zone de recherche -->
-            <form>
-                <label for="site-search"><img src="images/icons/icons8-marqueur-24.png"></label>
-                <input type="search" id="site-search" name="search">
-                <button>Rechercher</button>
-            </form>
+            <section>
+                <form>
+                    <label for="site-search"><i class="fa-solid fa-location-dot"></i></label>
+                    <input type="search" id="site-search" name="search">
+                    <button>Rechercher</button>
+                </form>
+            </section>
 
             <!-- Filtres -->
-            <ul><p>Filtres</p>
-                <li>
-                    <!--<img 
-                        src="images/icons/money-bill-wave-solid.svg" 
-                        alt="billet de banque"
-                        height="22"
-                        width="22">-->
-                        <i></i>
-                        <p>Economies</p>
-                    </li>
-                <li>
-                    <img 
-                        src="images/icons/person-solid.svg" 
-                        alt="bonhomme"
-                        height="22"
-                        width="22">
-                        <p>Familial</p>
-                    </li>
-                <li>
-                    <img 
-                        src="images/icons/heart-solid.svg" 
-                        alt="coeur"
-                        height="22"
-                        width="18,33">
-                        <p>Romantique</p>
-                    </li>
-                <li>
-                    <img 
-                        src="images/icons/dog-solid.svg" 
-                        alt="petit chien"
-                        height="22"
-                        width="22">
-                        <p>Animaux autorisés</p>
-                    </li>
-            </ul>
-            <p><img src="images/icons/i.png">Plus de 500 logements sont disponibles dans cette ville</p>
+            <section>
+                <ul><p>Filtres</p>
+                    <li>
+                        <!--<img 
+                            src="images/icons/money-bill-wave-solid.svg" 
+                            alt="billet de banque"
+                            height="22"
+                            width="22">-->
+                            <i></i>
+                            <p>Economies</p>
+                        </li>
+                    <li>
+                        <!--<img 
+                            src="images/icons/person-solid.svg" 
+                            alt="bonhomme"
+                            height="22"
+                            width="22">-->
+                            <i class="fa-solid fa-person"></i>
+                            <p>Familial</p>
+                        </li>
+                    <li>
+                        <img 
+                            src="images/icons/heart-solid.svg" 
+                            alt="coeur"
+                            height="22"
+                            width="18,33">
+                            <p>Romantique</p>
+                        </li>
+                    <li>
+                        <img 
+                            src="images/icons/dog-solid.svg" 
+                            alt="petit chien"
+                            height="22"
+                            width="22">
+                            <p>Animaux autorisés</p>
+                        </li>
+                </ul>
+            </section>
+
+            <section>
+                <p><img src="images/icons/i.png">Plus de 500 logements sont disponibles dans cette ville</p>
+            </section>
         </header>
 
         <article>

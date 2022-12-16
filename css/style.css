@@ -1,11 +1,19 @@
 /**************** Test part ******************/
 /*********************************************/
-body, header, footer, ul, div{
+body, header, footer, ul, div, section{
     border: 1px solid black;
 }
 
 /************** End Test part ****************/
 /*********************************************/
+
+/* 
+ * General style 
+ * - Fonts
+ * - Background
+ * - general margin
+ * - Font size for texts (p, h1, h2, ...)
+ */
 
 /* Fonts */
 @font-face {
@@ -13,7 +21,7 @@ body, header, footer, ul, div{
     src: url("../fonts/Raleway/static/Raleway-Regular.ttf");
 }
 
-/* General style */
+/* Body */
 body {
     background-color: #FFFFFF;
     width: 1000px; /* 1339px objectif */
@@ -21,43 +29,81 @@ body {
 
     font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
-ul li{
+a, a:visited{
     text-decoration: none;
-    list-style-type: none;
-}
-a{
-    text-decoration: none;
+    color: black;
 }
 
-/* Header */
-header label{
+/*
+ * Header 
+ * - Logo and nav
+ * - Title
+ * - Search bar
+ * - Filters
+ * - 
+ */
+
+/* Logo and nav */
+header section:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+header section:nth-child(1) img{
+    width: 61px;
+    height: 19px;
+}
+
+nav ul li{
+    width: 162px;
+    height: 100px;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li:hover{
+    border-top: 2px solid #0065FC;
+    color: #0065FC;
+    font-weight: 500;
+}
+
+nav ul li:hover a{
+    color: inherit;
+}
+
+/* Title */
+h1{
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+/* Search bar */
+header form label{
     background-color: #F2F2F2;
     border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
 }
-header input{
+header form input{
     background-color: #FFFFFF;
     border: 1px solid #F2F2F2;
     height: 49px;
 }
-header button{
+header form button{
     background-color: #0065FC;
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
 }
-header label, input, button{
+header form{
     padding: 10px;
 }
 
-header nav ul{
-    display: flex;
-    justify-content: right;
-}
-header nav ul li{
-    padding: 10px;
-    color: black;
-}
-
+/* Filters */
 header ul{
     display: flex;
     justify-content: left;
@@ -77,12 +123,27 @@ header > ul li{
 header > ul li img{
     margin-right: 5px;
 }
+header > ul li i{
+    color: #0065FC;
+}
 
-/* Article */
+/* 
+ * Articles
+ * - Herbergements
+ * - Best ones
+ * - Activities
+ */
 
-/* Aside */
+/* Herbergement */
 
-/* Footer */
+/* Best ones */
+
+/* Activities */
+
+
+/* 
+ * Footer
+ */
 footer{
     display: flex;
     flex-wrap: nowrap;
