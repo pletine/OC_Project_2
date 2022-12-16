@@ -1,6 +1,6 @@
 /**************** Test part ******************/
 /*********************************************/
-body, header, footer, ul, div, section{
+body, header, footer, ul, div, section,article, aside{
     border: 1px solid black;
 }
 
@@ -29,7 +29,10 @@ body, header, footer, ul, div, section{
 body {
     background-color: #FFFFFF;
     width: 1400px;
+    min-height: 100vh;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 
     font-family: "Raleway-Regular", Arial, Helvetica, sans-serif;
 }
@@ -198,7 +201,9 @@ section:last-child p{
  * - Best ones
  * - Activities
  */
-
+body > div{
+    display: flex;
+}
 /* Herbergement */
 
 /* Best ones */
@@ -212,9 +217,27 @@ section:last-child p{
 footer{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    flex: auto;
     background-color: #F2F2F2;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 225px;
+    margin-top: auto;
 }
-footer a{
-    color: black;
+footer h3{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 20px;
+}
+footer p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 12px;
+}
+footer ul{
+    padding-left: 70px;
+    padding-top: 45px;
+    flex: 1;
 }
