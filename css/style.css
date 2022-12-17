@@ -135,11 +135,19 @@ header form button{
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
     width: 132px;
-
+}
+header form button p{
     color: white;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
+}
+header form button i{
+    color: white;
+    width: 17px;
+    height: 17px;
+    margin: 16px;
+    display: none !important;
 }
 
 /* Filters */
@@ -203,6 +211,12 @@ section:last-child p{
  */
 body > div{
     display: flex;
+    flex-direction:  column;
+}
+body > div > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 /* Herbergement */
 
