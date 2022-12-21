@@ -22,8 +22,6 @@ body {
     max-width: 1400px;
     min-height: 100vh;
     margin: auto;
-    display: flex;
-    flex-direction: column;
 
     font-family: "Raleway-Regular", Arial, Helvetica, sans-serif;
 }
@@ -65,13 +63,11 @@ i{
     color: #0065FC;
 }
 
-/*
- * Header 
+/** Header 
  * - Logo and nav
  * - Title
  * - Search bar
  * - Filters
- * - 
  */
 header{
     margin-right: 55px;
@@ -79,32 +75,36 @@ header{
 }
 
 /* Logo and nav */
-header section:nth-child(1){
+nav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     height: 100px;
+    align-items: center;
 }
-header section:nth-child(1) img{
+nav img{
     width: 61px;
     height: 19px;
 }
-nav ul li{
+nav li{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+
     width: 162px;
-    height: 100px;
     font-size: 19px;
     font-weight: 400;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    line-height: 100px;
 }
-nav ul li:hover{
+nav a{
+    height: 100px;
+    padding: 30px;
+}
+nav li:hover{
     border-top: 2px solid #0065FC;
     color: #0065FC;
     font-weight: 500;
 }
-nav ul li:hover a{
+nav li:hover a{
     color: inherit;
 }
 
@@ -113,30 +113,26 @@ form{
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
 }
 form label{
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: #F2F2F2;
     border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
     width: 50px;
-    height: 49px;
 }
 form label i{
-    color: back;
+    color: #000000;
     width: 14px;
     height: 18px;
-    color: #000000;
 }
 form input{
     background-color: #FFFFFF;
     border: 1px solid #F2F2F2;
-    height: 49px;
+    height: 50px;
     width: 236px;
 }
 form button{
@@ -149,18 +145,16 @@ form button p{
     color: white;
     font-weight: 700;
     font-size: 18px;
-    line-height: 21px;
 }
 form button i{
     color: white;
     width: 17px;
     height: 17px;
-    margin: 16px;
     display: none !important;
 }
 
 /* Filters */
-header section:nth-child(4){
+header section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -172,48 +166,33 @@ header section h2{
     line-height: 21px;
     margin: 7px;
 }
-header section ul{
+header section span{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
+
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    height: 50px;
+    margin: 0 1%;
 }
-header section > ul li{
-    display: flex;
-    flex-wrap: wrap;
-    border: #d9d9d9 2px solid;
-    border-radius: 50px;
-    background-color: #FFFFFF;
-    margin: 0 20px 0 10px;
-    padding-right: 15px;
-    padding-left: 15px;
-    align-items: center;
-}
-header section > ul li:active{
-    background-color: #DEEBFF;
-}
-header section > ul li > *{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-header section > ul li i{
-    color: #0065FC;
-    padding: 10px;
-}
-header section > ul li p{
+header section span p{
     font-weight: 700;
     font-size: 17px;
-    line-height: 20px;
+    margin-right: 10px;
+}
+header section span i{
+    margin: 10px;
+}
+header section span:active{
+    background-color: #DEEBFF;
 }
 
 /* Indications */
-section:last-child{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+header > p:last-child{
+    margin: 11px 0;
 }
-section:last-child i{
+header > p > i{
     font-size: 10px;
     color: #0065FC;
     padding: 4px 7px 4px 7px;
@@ -221,11 +200,8 @@ section:last-child i{
     border-radius: 50%;
     margin: 4px;
 }
-section:last-child p{
-    margin: 11px;
-}
 
-/* 
+/** Main
  * Articles
  * - Herbergements
  * - Best ones
@@ -267,7 +243,6 @@ main img{
 main section > * ul li a div {
     margin: 10px;
 }
-
 main section li{
     display: flex;
     background-color: #FFFFFF;
@@ -361,7 +336,7 @@ main > article ul li a img{
     width: 100%;
 }
 
-/* 
+/*
  * Footer
  */
 footer{
@@ -369,8 +344,7 @@ footer{
     flex-wrap: nowrap;
     flex: auto;
     background-color: #F2F2F2;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 50px;
     height: 225px;
     margin-top: auto;
 }

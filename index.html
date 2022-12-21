@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <title>Booki</title>
         <meta name='description' content="Les meilleurs Réservations pour vos vacances">
+        <meta name="robots" content="index,follow">
         <!-- Style et taille écran -->
-        <link rel="stylesheet" href="css/style_reset.css">
         <link rel="stylesheet" href="css/style_reset_mini.css">
         <link rel="stylesheet" href="css/style_normalize.css">
         <link rel="stylesheet" href="css/style.css">
@@ -19,79 +19,65 @@
     <body>
         <header>
             <!-- Logo, Liens Hébergement et Activités -->
-            <section>
+            <nav>
                 <img src="images/logo/Booki.png" alt="Logo Booki">
-                <nav>
-                    <ul>
-                        <li><a href="#">Hébergements</a></li>
-                        <li><a href="#">Activités</a></li>
-                    </ul>
-                </nav>
-            </section>
+                <ul>
+                    <li><a href="#Herbergements">Hébergements</a></li>
+                    <li><a href="#Activities">Activités</a></li>
+                </ul>
+            </nav>
             
             <!-- Title -->
-            <section>
-                <h1>Trouver votre hébergement pour les vacances de rêve</h1>
-                <p>En plein centre-ville ou en pleine nature</p>
-            </section>
+            <h1>Trouver votre hébergement pour les vacances de rêve</h1>
+            <p>En plein centre-ville ou en pleine nature</p>
 
             <!-- Zone de recherche -->
-            <section>
-                <form>
-                    <label for="site-search">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </label>
-                    <input
-                        type="search" 
-                        id="site-search" 
-                        name="search"
-                        placeholder="Ex: Marseille, France"
-                        autocorrect="off">
-                    <button>
-                        <p>Rechercher</p>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-            </section>
+            <form>
+                <label for="site-search">
+                    <i class="fa-solid fa-location-dot"></i>
+                </label>
+                <input
+                    type="search" 
+                    id="site-search" 
+                    name="search"
+                    placeholder="Ex: Marseille, France"
+                    autocorrect="off">
+                <button>
+                    <p>Rechercher</p>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
 
             <!-- Filtres -->
             <section>
                 <h2>Filtres</h2>
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-money-bill-wave"></i>
-                        <p>&Eacute;conomique</p>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-person"></i>
-                        <p>Familial</p>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-heart"></i>
-                        <p>Romantique</p>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-dog"></i>
-                        <p>Animaux autorisés</p>
-                    </li>
-                </ul>
+                <span>
+                    <i class="fa-solid fa-money-bill-wave"></i><p>&Eacute;conomique</p>
+                </span>
+                <span>
+                    <i class="fa-solid fa-person"></i><p>Familial</p>
+                </span>
+                <span>
+                    <i class="fa-solid fa-heart"></i><p>Romantique</p>
+                </span>
+                <span>
+                    <i class="fa-solid fa-dog"></i><p>Animaux autorisés</p>
+                </span>
             </section>
-
-            <!-- Indications -->
-            <section>
-                <div><i class="fa-solid fa-info"></i></div>
-                <p>Plus de 500 logements sont disponibles dans cette ville</p>
-            </section>
+            <p>
+                <i class="fa-solid fa-info"></i>
+                Plus de 500 logements sont disponibles dans cette ville
+            </p>
         </header>
 
         <main>
             <section>
-                <article>
+                <article id="Herbergements">
                     <h2>Hébergements à Marseille</h2>
                     <ul>
                         <li>
                             <a href="#">
-                                <img 
+                                <img
                                     src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
                                     alt="Auberge La Canebière">
                                 <div>
@@ -111,9 +97,9 @@
                             <a href="#">
                                 <img 
                                     src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
-                                    alt="Hôtel Les mouettes">
+                                    alt="Hôtel du port">
                                 <div>
-                                    <h4>c</h4>
+                                    <h4>Hôtel du port</h4>
                                     <p>Nuit à partir de 52€</p>
                                     <div>
                                         <i class="fa-solid fa-star"></i>
@@ -227,7 +213,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img 
+                                <img
                                     src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
                                     alt="Chambres d'hôtes Au coeur de l'eau">
                                 <div>
@@ -265,7 +251,7 @@
                 </aside>
             </section>
             
-            <article> <!-- Activities -->
+            <article id="Activities"> <!-- Activities -->
                 <h2>Activités à Marseille</h2>
                 <ul>
                     <li>
