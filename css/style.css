@@ -194,7 +194,7 @@ input[type="checkbox"]:checked + label{
 
 /* Indications */
 header > p:last-child{
-    margin: 11px 0;
+    margin: 2em 0;
 }
 header > p > i{
     font-size: 10px;
@@ -207,138 +207,121 @@ header > p > i{
 
 /** Main
  * Articles
- * - Herbergements
+ * - Places = Hebergements
  * - Best ones
  * - Activities
  */
 main{
     display: flex;
-    flex-direction: column;
-}
-main > section{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
-    margin-left: 50px;
-    margin-right: 50px;
-    gap: 40px;
-}
-main section > *{ /* Article and Aside */
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    background-color: #F2F2F2;
-    border: 1px solid #F2F2F2;
-    border-radius: 25px;
-}
-main section ul{
-    display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-around;
+    margin: 30px;
 }
-main p{
-    font-size: 14px;
-    line-height: 16px;  
+main h2{
+    margin: 30px;
 }
-main img{
-    object-fit: cover;
+#places, aside{
+    background-color: #F2F2F2;
+    border-radius: 20px;
 }
-main section > * ul li a div {
-    margin: 10px;
-}
-main section li{
+figure{
     display: flex;
     background-color: #FFFFFF;
     border-radius: 20px;
+    margin: 2%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
-main section li i:last-child{
-    color: #F2F2F2;
-}
-main section li:hover{
+figure:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-
-/* Herbergement */
-main section article{
-    max-width: 880px;
+figure img{
+    object-fit: cover;
 }
-main section article li a{
-    flex-direction: column;
-    width: 246px;
-    height: 199px;
-}
-main section article li img{
+#places img, aside img{
     border: 5px solid #FFFFFF;
-    border-radius: 20px 20px 0px 0px;
+}
+figcaption{
+    position: relative;
+}
+figcaption div i:last-child{
+    color: #F2F2F2;
+}
+
+/* Hebergements */
+#places{
+    width: 68%;
+}
+#places > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#places figure{
+    width: 246px;
+    height: 200px;
+    flex-direction: column;
+}
+#places figure img{
     height: 124px;
     width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+#places figcaption{
+    padding: 5px 15px;
 }
 
-/* Best ones */
-main section aside{
-    max-width: 420px;
+/* Les plus populaires */
+aside{
+    width: 28%;
 }
-main section aside li a{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+aside h2{
+    position: relative;
+}
+aside h2 i{
+    position: absolute;
+    right: 0;
+}
+aside figure{
     width: 343px;
     height: 144px;
-}
-main section aside > div {
-    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    margin: 15px 10px;
 }
-main section aside li img{
-    border: 5px solid #FFFFFF;
-    border-radius: 20px 0px 0px 20px;
-    height: 100%;
+aside figure img{
     width: 137px;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
 }
-main section aside ul li{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+aside figcaption{
+    padding: 15px 5px;
+    margin-bottom: 10px;
+}
+aside figcaption div{
+    position: absolute;
+    bottom: 0;
 }
 
 /* Activities */
-main > article{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 50px;
-}
-main > article ul{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-main > article ul li{
-    background-color: #FFFFFF;
-    border: 0px solid #FFFFFF;
-    border-radius: 20px;
-    width: 300px;
-    height: 445px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-main > article ul li:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-main > article ul li a{
-    display: flex;
-    flex-direction: column;
-}
-main > article ul li a img{
-    border-radius: 20px 20px 0 0;
-    height: 389px;
+#activities{
     width: 100%;
 }
+#activities > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#activities figure{
+    width: 300px;
+    height: 445px;
+    flex-direction: column;
+}
+#activities figure img{
+    height: 389px;
+    border-radius: 20px 20px 0 0;
+}
+
 
 /*
  * Footer
@@ -351,6 +334,9 @@ footer{
     margin: 0 50px;
     height: 225px;
     margin-top: auto;
+}
+footer h3{
+    font-family: "Raleway-Gras", Arial, Helvetica, sans-serif;
 }
 footer p{
     font-weight: 400;
