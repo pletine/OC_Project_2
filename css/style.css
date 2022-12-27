@@ -70,15 +70,14 @@ i{
  * - Filters
  */
 header{
-    margin-right: 55px;
-    margin-left: 55px;
+    margin: 0 2em;
 }
 
 /* Logo and nav */
 nav{
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    min-height: 100px;
     align-items: center;
 }
 nav img{
@@ -89,14 +88,11 @@ nav li{
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-
-    width: 162px;
     font-size: 19px;
     font-weight: 400;
     line-height: 100px;
 }
 nav a{
-    height: 100px;
     padding: 30px;
 }
 nav li:hover{
@@ -150,7 +146,6 @@ form button i{
     color: white;
     width: 17px;
     height: 17px;
-    display: none !important;
 }
 
 /* Filters */
@@ -213,14 +208,18 @@ header > p > i{
  */
 main{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 30px;
+    flex-direction: column;
+    margin: 30px 50px;
 }
 main h2{
     margin: 30px;
 }
-#places, aside{
+main > div{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+main > div > *{
     background-color: #F2F2F2;
     border-radius: 20px;
 }
@@ -238,7 +237,7 @@ figure:hover{
 figure img{
     object-fit: cover;
 }
-#places img, aside img{
+main > div > * > img{
     border: 5px solid #FFFFFF;
 }
 figcaption{
@@ -250,7 +249,7 @@ figcaption div i:last-child{
 
 /* Hebergements */
 #places{
-    width: 68%;
+    flex: 2 1 0;
 }
 #places > div{
     display: flex;
@@ -270,10 +269,13 @@ figcaption div i:last-child{
 #places figcaption{
     padding: 5px 15px;
 }
+#places h3{
+    margin-left: 44px;
+}
 
 /* Les plus populaires */
 aside{
-    width: 28%;
+    flex: 1 1 0;
 }
 aside h2{
     position: relative;
@@ -318,8 +320,11 @@ aside figcaption div{
     flex-direction: column;
 }
 #activities figure img{
-    height: 389px;
+    height: 90%;
     border-radius: 20px 20px 0 0;
+}
+#activities h3{
+    margin: 20px;
 }
 
 
@@ -331,8 +336,7 @@ footer{
     flex-wrap: nowrap;
     flex: auto;
     background-color: #F2F2F2;
-    margin: 0 50px;
-    height: 225px;
+    margin: 0 2em;
     margin-top: auto;
 }
 footer h3{
@@ -345,7 +349,106 @@ footer p{
     margin-bottom: 12px;
 }
 footer ul{
-    padding-left: 70px;
+    padding-left: 10%;
     padding-top: 25px;
+    padding-bottom: 50px;
     flex: 1;
+}
+
+
+
+
+
+
+/*************************************************************************
+ * Media queries 
+ */
+@media only screen and (min-width: 1280px){
+    form button i{
+        display: none !important;
+    }
+}
+
+/* Sur tous les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+@media screen and (min-width: 900px) and (max-width: 1280px){
+    main{
+        flex-wrap: wrap;
+    }
+    main > div{
+        flex-direction: column;
+    }
+    #places, aside{
+        width: 100%;
+    }
+
+    form button i{
+        display: none !important;
+    }
+}
+
+/* Sur tous types d'écrans orientés verticalement */
+@media all and (max-width: 900px){
+    /* Header */
+    header{
+        margin: 0;
+    }
+    header > *:not(nav){
+        margin: 2%;
+    }
+
+    /* Nav */
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul{
+        width: 100%;
+        display: flex;
+    }
+    nav li{
+        flex: 2 0 auto;
+    }
+    nav img{
+        margin-top: 20px;
+    }
+    nav li:hover{
+        border-bottom: 2px solid #0065FC;
+        border-top: none;
+        color: #0065FC;
+        font-weight: 500;
+    }
+
+    /* Search bar */
+    form button{
+        width: 49px;
+    }
+    form button p{
+        display: none;
+    }
+
+    /* Filters */
+    .filters h2{
+        flex: 0 0 auto;
+        width: 100%;
+        text-align: left;
+    }
+    header div label{
+        flex: 45% 1 0;
+        justify-content: left;
+    }
+
+    /* Main */
+    main > div{
+        flex-direction: column-reverse;
+    }
+
+    /* Footer */
+    footer{
+        flex-direction: column;
+        margin: 0;
+    }
+    footer ul{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
