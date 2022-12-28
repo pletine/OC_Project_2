@@ -51,8 +51,8 @@ h4{
     line-height: 19px;
 }
 p{
-    font-size: 16px;
     font-weight: 400;
+    font-size: 16px;
     line-height: 19px;
 }
 a, a:visited{
@@ -149,8 +149,7 @@ form button i{
 }
 
 /* Filters */
-.filters
-{
+.filters{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -166,10 +165,11 @@ form button i{
 input[type="checkbox"][name="filter"]{
     display: none;
 }
-header div label{
+.filters label{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
 
     font-weight: 700;
     font-size: 17px;
@@ -211,9 +211,6 @@ main{
     flex-direction: column;
     margin: 30px 50px;
 }
-main h2{
-    margin: 30px;
-}
 main > div{
     display: flex;
     flex-direction: row;
@@ -223,6 +220,12 @@ main > div > *{
     background-color: #F2F2F2;
     border-radius: 20px;
 }
+main h2{
+    margin: 1.2em;
+}
+
+
+/* Figures / Cards */
 figure{
     display: flex;
     background-color: #FFFFFF;
@@ -243,13 +246,16 @@ main > div > * > img{
 figcaption{
     position: relative;
 }
+figcaption p{
+    font-size: 14px;
+}
 figcaption div i:last-child{
     color: #F2F2F2;
 }
 
 /* Hebergements */
 #places{
-    flex: 2 1 0;
+    flex: 2 1 0; /* Prends 2 fois plus de place que les plus populaires */
 }
 #places > div{
     display: flex;
@@ -275,24 +281,26 @@ figcaption div i:last-child{
 
 /* Les plus populaires */
 aside{
-    flex: 1 1 0;
+    flex: 1 1 0; /* Prend 2 fois moins de place que les hébergements */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 aside h2{
     position: relative;
+    width: 100%;
 }
 aside h2 i{
     position: absolute;
     right: 0;
 }
 aside figure{
-    width: 343px;
     height: 144px;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: 15px 10px;
 }
 aside figure img{
-    width: 137px;
+    width: 40%;
     height: 100%;
     border-radius: 20px 0 0 20px;
 }
@@ -323,10 +331,15 @@ aside figcaption div{
     height: 90%;
     border-radius: 20px 20px 0 0;
 }
-#activities h3{
-    margin: 20px;
+#activities figcaption{
+    flex: 1 1 0;
 }
-
+#activities h4{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 19px;
+}
 
 /*
  * Footer
@@ -361,16 +374,23 @@ footer ul{
 
 
 /*************************************************************************
- * Media queries 
+ * Media queries
  */
+/* Sur les écrans dont la largeur est supérieur à 1280px */
 @media only screen and (min-width: 1280px){
     form button i{
         display: none !important;
     }
 }
 
-/* Sur tous les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+/* Sur les écrans, dont la largeur de la fenêtre est entre 900px et 1280px */
 @media screen and (min-width: 900px) and (max-width: 1280px){
+    /* Header */
+    form button i{
+        display: none !important;
+    }
+    
+    /* Main */
     main{
         flex-wrap: wrap;
     }
@@ -380,13 +400,15 @@ footer ul{
     #places, aside{
         width: 100%;
     }
-
-    form button i{
-        display: none !important;
+    aside h3{
+        font-size: 14px;
+    }
+    aside p{
+        font-size: 13px;
     }
 }
 
-/* Sur tous types d'écrans orientés verticalement */
+/* Sur tous types d'écrans orientés verticalement de taille inférieure à 900px */
 @media all and (max-width: 900px){
     /* Header */
     header{
@@ -406,7 +428,7 @@ footer ul{
         display: flex;
     }
     nav li{
-        flex: 2 0 auto;
+        flex: 2 1 0;
     }
     nav img{
         margin-top: 20px;
@@ -419,6 +441,9 @@ footer ul{
     }
 
     /* Search bar */
+    form{
+        justify-content: center;
+    }
     form button{
         width: 49px;
     }
@@ -432,14 +457,28 @@ footer ul{
         width: 100%;
         text-align: left;
     }
-    header div label{
+    .filters label{
+        font-size: 11px;
         flex: 45% 1 0;
         justify-content: left;
     }
 
     /* Main */
+    main{
+        margin: 0;
+    }
     main > div{
         flex-direction: column-reverse;
+    }
+    #places{
+        background-color: #FFFFFF;
+    }
+    main > div > *{
+        margin: 0;
+        border-radius: 0;
+    }
+    #places h3{
+        display: none;
     }
 
     /* Footer */
