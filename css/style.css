@@ -180,7 +180,7 @@ input[type="checkbox"][name="filter"]{
     height: 50px;
     padding: 0 1em 0 0.8em;
 }
-header div label i{
+.filters label i{
     margin: 5px;
 }
 input[type="checkbox"]:checked + label{
@@ -188,16 +188,20 @@ input[type="checkbox"]:checked + label{
 }
 
 /* Indications */
-header > p:last-child{
+header > div:last-child{
     margin: 2em 0;
 }
-header > p > i{
+header > div:last-child > i{
+    display: inline;
     font-size: 10px;
     color: #0065FC;
     padding: 4px 7px 4px 7px;
     border: 1px solid #D9D9D9;
     border-radius: 50%;
     margin: 4px;
+}
+header > div:last-child > p{
+    display: inline;
 }
 
 /** Main
@@ -208,15 +212,17 @@ header > p > i{
  */
 main{
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     margin: 30px 50px;
-}
-main > div{
-    display: flex;
-    flex-direction: row;
     gap: 2em;
 }
-main > div > *{
+#places{
+    width: 65%;
+}
+aside{
+    width: 25%;
+}
+#places, aside{
     background-color: #F2F2F2;
     border-radius: 20px;
 }
@@ -240,7 +246,7 @@ figure:hover{
 figure img{
     object-fit: cover;
 }
-main > div > * > img{
+#places img, aside img{
     border: 5px solid #FFFFFF;
 }
 figcaption{
@@ -255,7 +261,7 @@ figcaption div i:last-child{
 
 /* Hebergements */
 #places{
-    flex: 2 1 0; /* Prends 2 fois plus de place que les plus populaires */
+    flex: 5 1 0; /* Prends 2 fois plus de place que les plus populaires */
 }
 #places > div{
     display: flex;
@@ -264,7 +270,7 @@ figcaption div i:last-child{
 }
 #places figure{
     width: 246px;
-    height: 200px;
+    height: 199px;
     flex-direction: column;
 }
 #places figure img{
@@ -281,7 +287,7 @@ figcaption div i:last-child{
 
 /* Les plus populaires */
 aside{
-    flex: 1 1 0; /* Prend 2 fois moins de place que les hébergements */
+    flex: 3 1 0; /* Prend 2 fois moins de place que les hébergements */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -296,6 +302,7 @@ aside h2 i{
 }
 aside figure{
     height: 144px;
+    width: 343px;
     flex-direction: row;
     flex-wrap: nowrap;
 }
@@ -376,15 +383,15 @@ footer ul{
 /*************************************************************************
  * Media queries
  */
-/* Sur les écrans dont la largeur est supérieur à 1280px */
-@media only screen and (min-width: 1280px){
+/* Sur les écrans dont la largeur est supérieur à 992px */
+@media only screen and (min-width: 992px){
     form button i{
         display: none !important;
     }
 }
 
-/* Sur les écrans, dont la largeur de la fenêtre est entre 900px et 1280px */
-@media screen and (min-width: 900px) and (max-width: 1280px){
+/* Sur les écrans, dont la largeur de la fenêtre est entre 768px et 992px */
+@media screen and (min-width: 768px) and (max-width: 992px){
     /* Header */
     form button i{
         display: none !important;
@@ -393,8 +400,6 @@ footer ul{
     /* Main */
     main{
         flex-wrap: wrap;
-    }
-    main > div{
         flex-direction: column;
     }
     #places, aside{
@@ -408,8 +413,8 @@ footer ul{
     }
 }
 
-/* Sur tous types d'écrans orientés verticalement de taille inférieure à 900px */
-@media all and (max-width: 900px){
+/* Sur tous types d'écrans orientés verticalement de taille inférieure à 768px */
+@media all and (max-width: 768px){
     /* Header */
     header{
         margin: 0;
@@ -429,6 +434,9 @@ footer ul{
     }
     nav li{
         flex: 2 1 0;
+    }
+    nav a{
+        padding: 0;
     }
     nav img{
         margin-top: 20px;
@@ -463,15 +471,25 @@ footer ul{
         justify-content: left;
     }
 
+    /* Indications */
+    header > div:last-child > i{
+        float: left;
+    }
+
     /* Main */
     main{
         margin: 0;
+        flex-direction: column;
     }
-    main > div{
-        flex-direction: column-reverse;
+    aside{
+        order: -1;
+        border-radius: 0;
     }
     #places{
         background-color: #FFFFFF;
+    }
+    #places, aside{
+        width: 100%;
     }
     main > div > *{
         margin: 0;
