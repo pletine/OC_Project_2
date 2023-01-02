@@ -136,7 +136,7 @@ form button{
     border-radius: 0px 15px 15px 0px;
     width: 132px;
 }
-form button p{
+form button span{
     color: white;
     font-weight: 700;
     font-size: 18px;
@@ -266,7 +266,7 @@ figcaption div i:last-child{
 #places figure{
     width: 20vw;
     max-width: 250px;
-    aspect-ratio: 1.24;
+    aspect-ratio: 310 / 250;
     flex-direction: column;
     margin: 2%;
 }
@@ -409,7 +409,7 @@ footer ul{
     #places figure{
         width: 240px;
         height: 190px;
-        aspect-ratio: none;
+        aspect-ratio: auto;
         margin: 15px 0;
     }
     #places figure img{
@@ -418,7 +418,7 @@ footer ul{
     aside figure{
         width: 240px;
         height: 140px;
-        aspect-ratio: none;
+        aspect-ratio: auto;
     }
     aside figure img{
         width: 100px;
@@ -480,7 +480,7 @@ footer ul{
     form button{
         width: 49px;
     }
-    form button p{
+    form button span{
         display: none;
     }
 
@@ -529,7 +529,7 @@ footer ul{
     #places figure{
         width: 333px;
         height: 199px;
-        aspect-ratio: none;
+        aspect-ratio: auto;
     }
     #places h3{
         display: none;
@@ -540,7 +540,7 @@ footer ul{
     #activities figure{
         width: 334px;
         height: 190px;
-        aspect-ratio: none;
+        aspect-ratio: auto;
     }
     #activities figure img{
         height: 134px;
