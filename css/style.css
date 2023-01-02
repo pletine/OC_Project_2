@@ -213,14 +213,15 @@ main{
     display: flex;
     flex-flow: row wrap;
     margin: 20px 1em;
-    gap: 0.8em;
+    gap: 0.7em;
 }
 #places, aside{
     background-color: #F2F2F2;
     border-radius: 20px;
 }
 main h2{
-    margin: 1.2em;
+    margin: 0.8em;
+    width: 100%;
 }
 
 /* Figures / Cards */
@@ -256,14 +257,14 @@ figcaption div i:last-child{
 /* Hebergements */
 #places{
     flex: 1 1 0;
-    flex-basis: 65%;
+    flex-basis: 70%;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 #places figure{
-    flex: 1 1 auto;
+    width: 246px;
     height: 199px;
     flex-direction: column;
 }
@@ -274,9 +275,6 @@ figcaption div i:last-child{
 }
 #places figcaption{
     padding: 0px 10px 5px 10px;
-}
-#places h2{
-    width: 100%;
 }
 #places h3{
     width: 100%;
@@ -291,14 +289,14 @@ aside{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 1%;
 }
 aside h2{
     position: relative;
-    width: 100%;
 }
 aside h2 i{
     position: absolute;
-    right: 0;
+    right: 5%;
     top: 20%;
     font-size: 18px !important;
 }
@@ -324,10 +322,8 @@ aside figcaption div{
 /* Activities */
 #activities{
     width: 100%;
-}
-#activities > div{
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 #activities figure{
@@ -336,7 +332,7 @@ aside figcaption div{
     flex-direction: column;
 }
 #activities figure img{
-    height: 90%;
+    height: 389px;
     border-radius: 20px 20px 0 0;
 }
 #activities figcaption{
@@ -406,11 +402,33 @@ footer ul{
     #places, aside{
         width: 100%;
     }
+    #places figure{
+        width: 243px;
+        height: 190px;
+        margin: 15px 0;
+    }
+    #places figure img{
+        height: 120px;
+    }
+    aside figure{
+        width: 240px;
+        height: 140px;
+    }
+    aside figure img{
+        width: 100px;
+    }
     aside h3{
         font-size: 14px;
     }
     aside p{
         font-size: 13px;
+    }
+    #activities figure{
+        width: 182px;
+        height: 267px;
+    }
+    #activities figure img{
+        height: 211px;
     }
 }
 
@@ -479,12 +497,17 @@ footer ul{
 
     /* Main */
     main{
-        margin: 0;
+        margin: 2% 0;
         flex-direction: column;
+    }
+    figure{
+        margin: 3% 0;
+    }
+    main h2{
+        padding: 0 5%;
     }
     aside{
         order: -1;
-        border-radius: 0;
     }
     #places{
         background-color: #FFFFFF;
@@ -492,12 +515,21 @@ footer ul{
     #places, aside{
         width: 100%;
     }
-    main > div > *{
+    #places, aside, #activities{
+        flex-flow: column nowrap;
+        align-items: center;
         margin: 0;
         border-radius: 0;
     }
     #places h3{
         display: none;
+    }
+    #activities figure{
+        width: 334px;
+        height: 190px;
+    }
+    #activities figure img{
+        height: 134px;
     }
 
     /* Footer */
