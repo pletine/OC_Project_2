@@ -256,17 +256,19 @@ figcaption div i:last-child{
 
 /* Hebergements */
 #places{
-    flex: 1 1 0;
-    flex-basis: 70%;
-
+    flex: 2 0 65%;
+    max-width: 900px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    padding: 1%;
 }
 #places figure{
-    width: 246px;
-    height: 199px;
+    width: 20vw;
+    max-width: 250px;
+    aspect-ratio: 1.24;
     flex-direction: column;
+    margin: 2%;
 }
 #places figure img{
     height: 124px;
@@ -283,8 +285,8 @@ figcaption div i:last-child{
 
 /* Les plus populaires */
 aside{
-    flex: 1 1 0;
-    flex-basis: 25%;
+    flex: 1 0 20%;
+    max-width: 400px;
 
     display: flex;
     flex-wrap: wrap;
@@ -324,15 +326,16 @@ aside figcaption div{
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #activities figure{
-    width: 300px;
-    height: 445px;
+    width: 23vw;
+    max-width: 300px;
+    aspect-ratio: 300 / 445;
     flex-direction: column;
 }
 #activities figure img{
-    height: 389px;
+    height: 90%;
     border-radius: 20px 20px 0 0;
 }
 #activities figcaption{
@@ -401,10 +404,12 @@ footer ul{
     }
     #places, aside{
         width: 100%;
+        max-width: none;
     }
     #places figure{
-        width: 243px;
+        width: 240px;
         height: 190px;
+        aspect-ratio: none;
         margin: 15px 0;
     }
     #places figure img{
@@ -413,6 +418,7 @@ footer ul{
     aside figure{
         width: 240px;
         height: 140px;
+        aspect-ratio: none;
     }
     aside figure img{
         width: 100px;
@@ -506,27 +512,35 @@ footer ul{
     main h2{
         padding: 0 5%;
     }
-    aside{
-        order: -1;
-    }
-    #places{
-        background-color: #FFFFFF;
-    }
-    #places, aside{
-        width: 100%;
-    }
     #places, aside, #activities{
         flex-flow: column nowrap;
         align-items: center;
         margin: 0;
         border-radius: 0;
     }
+    #places, aside{
+        width: 100%;
+        max-width: none;
+    }
+    
+    #places{
+        background-color: #FFFFFF;
+    }
+    #places figure{
+        width: 333px;
+        height: 199px;
+        aspect-ratio: none;
+    }
     #places h3{
         display: none;
+    }
+    aside{
+        order: -1;
     }
     #activities figure{
         width: 334px;
         height: 190px;
+        aspect-ratio: none;
     }
     #activities figure img{
         height: 134px;
