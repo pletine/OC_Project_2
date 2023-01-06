@@ -23,8 +23,8 @@
             <nav>
                 <img src="images/logo/Booki.png" alt="Logo Booki">
                 <ul>
-                    <li><a href="#places">Hébergements</a></li>
-                    <li><a href="#activities">Activités</a></li>
+                    <li><a href="#places" title="Section Logements">Hébergements</a></li>
+                    <li><a href="#activities" title="Section Activités">Activités</a></li>
                 </ul>
             </nav>
             
@@ -33,7 +33,9 @@
             <p>En plein centre-ville ou en pleine nature</p>
 
             <!-- Zone de recherche -->
-            <form>
+            <form action="" 
+                name="search"
+                method="post">
                 <label for="site-search">
                     <i class="fa-solid fa-location-dot"></i>
                 </label>
@@ -42,7 +44,10 @@
                     id="site-search" 
                     name="search"
                     placeholder="Ex: Marseille, France">
-                <button>
+                <button type="submit"
+                        form="search"
+                        value=""
+                        formmethod="post">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span>Rechercher</span>
                 </button>
@@ -74,7 +79,7 @@
             <article id="places">
                 <h2>Hébergements à Marseille</h2>
 
-                <a href="#"><figure>
+                <a href="#" title="Détails Hébergement"><figure>
                     <img
                         src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
                         alt="Auberge La Canebière">
@@ -90,7 +95,7 @@
                         </div>
                     </figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Hébergement"><figure>
                     <img 
                         src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
                         alt="Hôtel du port">
@@ -106,7 +111,7 @@
                         </div>
                     </figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Hébergement"><figure>
                     <img 
                         src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
                         alt="Hôtel Les mouettes">
@@ -122,7 +127,7 @@
                         </div>
                     </figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Hébergement"><figure>
                     <img 
                         src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
                         alt="Hôtel de la mer">
@@ -138,7 +143,7 @@
                         </div>
                     </figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Hébergement"><figure>
                     <img 
                         src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
                         alt="Auberge Le Panier">
@@ -154,7 +159,7 @@
                         </div>
                     </figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Hébergement"><figure>
                     <img 
                         src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
                         alt="Hôtel chez Amina">
@@ -176,7 +181,7 @@
 
             <aside>
                 <h2>Les plus populaires<i class="fa-solid fa-chart-line"></i></h2>
-                <a href="#"><figure>
+                <a href="#" title="Détails Hébergement"><figure>
                     <img 
                         src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
                         alt="Hôtel Le soleil du matin">
@@ -192,7 +197,7 @@
                         </div>
                     </figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Hébergement"><figure>
                     <img
                         src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
                         alt="Chambres d'hôtes Au coeur de l'eau">
@@ -208,7 +213,7 @@
                         </div>
                     </figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Hébergement"><figure>
                     <img
                         src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" 
                         alt="Hôtel Bleu et Blanc">
@@ -229,25 +234,25 @@
             <article id="activities"> <!-- Activities -->
                 <h2>Activités à Marseille</h2>
 
-                <a href="#"><figure>
+                <a href="#" title="Détails Activité"><figure>
                     <img 
                         src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" 
                         alt="Vieux Port">
                     <figcaption><h4>Vieux Port</h4></figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Activité"><figure>
                     <img
                         src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" 
                         alt="Fort de Pomègues">
                     <figcaption><h4>Fort de Pomègues</h4></figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Activité"><figure>
                     <img
                         src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" 
                         alt="Parc national des Calanques">
                     <figcaption><h4>Parc national des Calanques</h4></figcaption>
                 </figure></a>
-                <a href="#"><figure>
+                <a href="#" title="Détails Activité"><figure>
                     <img
                         src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" 
                         alt="Notre-Dame-de-la-Garde">
@@ -259,19 +264,19 @@
         <footer>
             <ul>
                 <li><h3>&Agrave; propos</h3></li>
-                <li><p><a href="#">Fonctionnement du site</a></p></li>
-                <li><p><a href="#">Conditions générales</a></p></li>
-                <li><p><a href="#">Données et confidentialité</a></p></li>
+                <li><p><a href="#" title="Plan du site">Fonctionnement du site</a></p></li>
+                <li><p><a href="#" title="Conditions d'utilisation">Conditions générales</a></p></li>
+                <li><p><a href="#" title="Vos données">Données et confidentialité</a></p></li>
             </ul>
             <ul>
                 <li><h3>Nos hébergements</h3></li>
-                <li><p><a href="#">Charte qualité</a></p></li>
-                <li><p><a href="#">Proposer votre hôtel</a></p></li>
+                <li><p><a href="#" title="Charte hébergements">Charte qualité</a></p></li>
+                <li><p><a href="#" title="Soumettre un hôtel">Proposer votre hôtel</a></p></li>
             </ul>
             <ul>
                 <li><h3>Assistance</h3></li>
-                <li><p><a href="#">Centre d'aide</a></p></li>
-                <li><p><a href="#">Nous contacter</a></p></li>
+                <li><p><a href="#" title="Des questions ?">Centre d'aide</a></p></li>
+                <li><p><a href="#" title="Formulaire de contact">Nous contacter</a></p></li>
             </ul>
         </footer>
     </body>
